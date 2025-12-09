@@ -8,11 +8,11 @@ import java.util.Properties;
 
 import com.dtcc.practicess.Demo;
 
-import hyr.locatorsANDmethods.Methos;
+//import hyr.locatorsANDmethods.Methos;
 
 public class webTable {
 	static Demo rock = new Demo();
-	static Methos me = new Methos();
+	//static Methos me = new Methos();
 	public static void main(String[] args) throws IOException {
 		String filepath = "C:\\Suresh\\com.dtcc\\src\\main\\resources\\config\\TestData.properties";
 		Properties props = new Properties();
@@ -24,9 +24,9 @@ public class webTable {
 		
 		try {
 			rock.drivergetURL(url);
-			me.downToWebTable();
-			List<Map<String,String>> kaki = me.getTableData();
-			System.out.println(kaki);
+		//	me.downToWebTable();
+			//List<Map<String,String>> kaki = me.getTableData();
+		//	System.out.println(kaki);
 			
 		}catch(Exception e) {
 			e.printStackTrace();

@@ -19,11 +19,16 @@ import org.openqa.selenium.support.ui.Select;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
-import driver.com.driver;
-
-public class Demo extends driver {
 
 
+
+
+public class Demo {
+
+	 static WebDriver driver = new ChromeDriver() ;
+//	public Demo() {
+		//driver = POSDriverManager.driver;
+	//}
 	public static JavascriptExecutor rr =  (JavascriptExecutor)driver;
 
 
@@ -38,12 +43,15 @@ public class Demo extends driver {
 	private By ElectronicButton = By.xpath("(//span[@class='TSD49J'])[1]");
 	private By text = By.xpath("(//input[@type='text'])[2]");
 
-
+//public static void setUp() {
+	//System.setProperty("webdriver.chrome.driver", "C:\\Suresh\\com.dtcc\\src\\test\\resources\\chromeDriver\\chromedriver.exe");
+		// driver = new ChromeDriver();
+	//}
 	public void drivergetURL(String url) {
-
+	//setUp();
 		driver.manage().window().maximize();
-		driver.get
-		(url);
+	driver.get(url);
+	
 
 	}
 
@@ -116,10 +124,10 @@ public class Demo extends driver {
 
 	public void Mobiles() throws InterruptedException {
 		//Thread.sleep(2000);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.findElement(mobilebutton).click();
 		//Thread.sleep(2000);
-		waitIM();
+	//	waitIM();
 		//Actions rock = new Actions(driver);
 
 		//rock.moveToElement(driver.findElement(By.xpath("(//div[@class='bpjkJb']/span)[1]"))).click().perform();
@@ -234,9 +242,21 @@ public class Demo extends driver {
 
 
 	}
+	
+	public HashMap<String,String> getAppleData(){
+		HashMap<String,String> rock = new HashMap<String,String>();
+		
+		String Key = driver.findElement(By.xpath("//h3[text()='iPhone Air  ']")).getText();
+		String value=driver.findElement(By.xpath("//span[text()='₹119900.00']")).getText();
+
+	rock.put(Key, value);
+		return rock;
+	}
 
 	public void quit() throws InterruptedException {
 		Thread.sleep(2000);
 		driver.quit();
 	}
+
+	
 }

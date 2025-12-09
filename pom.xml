@@ -6,25 +6,30 @@
   
   <dependencies>
 
-
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>6.3.3</version>
+</dependency>
 <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+
 <dependency>
     <groupId>com.aventstack</groupId>
     <artifactId>extentreports</artifactId>
     <version>5.1.2</version>
 </dependency>
-<!-- https://mvnrepository.com/artifact/com.github.bonigarcia/webdrivermanager -->
+
+<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
 <dependency>
-    <groupId>io.github.bonigarcia</groupId>
-    <artifactId>webdrivermanager</artifactId>
-    <version>6.0.1</version>
-    <scope>test</scope>
+  <groupId>org.seleniumhq.selenium</groupId>
+  <artifactId>selenium-devtools-v142</artifactId>
+  <version>4.38.0</version>  <!-- use the same Selenium version -->
 </dependency>
 <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
-    <version>4.31.0</version>
+    <version>4.38.0</version>
 </dependency>
 
     <dependency>
@@ -74,6 +79,12 @@
     <version>5.4.1</version>
 </dependency>
 
+<dependency>
+  <groupId>org.slf4j</groupId>
+  <artifactId>slf4j-simple</artifactId>
+  <version>2.0.9</version>
+  <scope>test</scope>
+</dependency>
 
 
 

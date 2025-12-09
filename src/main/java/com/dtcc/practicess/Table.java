@@ -23,7 +23,7 @@ public class Table {
 	 public static WebDriverWait wait = new WebDriverWait(driver, null);
 	 public static JavascriptExecutor toScroll =  (JavascriptExecutor)driver;
 	
-	public void drivergetURL(String url) {
+	public void launchURL(String url) {
 		try {
 		driver.manage().window().maximize();
 		 HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();

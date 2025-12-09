@@ -5,11 +5,17 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Properties;
 
+import org.openqa.selenium.WebDriver;
+
+
 import com.dtcc.practicess.Demo;
+
 
 public class Flipkart {
 	
 static Demo rock = new Demo();
+public static WebDriver driver;
+
 
 	
 	public static void main(String[] args) throws IOException {
@@ -21,17 +27,18 @@ static Demo rock = new Demo();
 		
 		String url = props.getProperty("flip");
 	
-		 
+		 System.out.println(url);
 		try {
 			
-			
 	
-		
+	
+	//driver.get("https://www.google.com");	
 	rock.drivergetURL(url);
 	rock.Mobiles();
-	/*
-	 * HashMap<String,String> Data= rock.getDattaa(); System.out.println(Data);
-	 */
+	
+	 HashMap<String,String> Data= rock.getDattaa();
+	 System.out.println(Data);
+	 
 	
 	String rock11 = rock.getData1();
 	System.out.println(rock11);
